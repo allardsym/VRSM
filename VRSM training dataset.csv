@@ -1,0 +1,61 @@
+Position,Hands,Bodyparts,Injuries,Symptoms,Goals,Outcome
+Stand,2,Upper,S,P,P/RK,Beach Ball Squats
+Sit,1,Upper,K,RS,FL,Goalkeeping
+Stand,1,Upper,E,STIFF,PM,Fruit Picking
+Stand,1,Upper,E,RROM,IROM,Tennis
+Sit,1,Upper,C,O/UT,EN,Boxing
+Stand,1,Upper,S,RROM,PM,Sorting
+Sit,1,Upper,C,RROM,PM,Fireflies
+Stand,1,Upper,E,STIFF,P/RK,Archery
+Sit,1,Upper,S,RROM,IROM,Music Sword
+Stand,1,Upper,E,P,PM,Witch Craft
+Stand,1,Lower,K,O/UT,FL,Skiing
+Stand,1,Upper,K,RS,FL,Please be seated
+Stand,1,Upper,A,PD,FL,Ring Dive
+Sit,1,Upper,W,P,P/RK,Breathing
+Sit,2,Lower,K,RS,FL,Leg Raises
+Stand,2,Lower,C,RROM,IA,Beach Ball Squats
+Stand,2,Upper,A,PD,IA,Goalkeeping
+Sit,2,Upper,C,RROM,P/RK,Fruit Picking
+Stand,2,Upper,W,P,EN,Tennis
+Stand,2,Upper,E,RS,P/RK,Boxing
+Sit,2,Upper,W,STIFF,IROM,Sorting
+Stand,2,Upper,E,PD,IA,Fireflies
+Sit,2,Upper,S,RROM,EN,Archery
+Stand,2,Upper,W,RS,FL,Music Sword
+Sit,2,Upper,W,RROM,IA,Witch Craft
+Stand,2,Lower,C,RS,P/RK,Skiing
+Stand,2,Lower,C,O/UT,EN,Please be seated
+Stand,2,Lower,K,RS,IROM,Ring Dive
+Sit,2,Lower,S,P,PM,Breathing
+Sit,2,Lower,C,O/UT,IROM,Leg Raises
+Stand,2,Upper,E,STIFF,PM,Beach Ball Squats
+Sit,1,Upper,C,O/UT,EN,Goalkeeping
+Stand,1,Upper,S,STIFF,IA,Fruit Picking
+Stand,1,Upper,W,STIFF,IROM,Tennis
+Sit,1,Upper,E,O/UT,IROM,Boxing
+Stand,1,Upper,S,RROM,P/RK,Sorting
+Sit,1,Upper,C,RROM,P/RK,Fireflies
+Stand,1,Upper,E,STIFF,FL,Archery
+Sit,1,Upper,S,RROM,IA,Music Sword
+Stand,1,Upper,E,P,PM,Witch Craft
+Stand,1,Lower,E,O/UT,EN,Skiing
+Stand,1,Upper,K,RROM,FL,Please be seated
+Stand,1,Upper,C,O/UT,PM,Ring Dive
+Sit,1,Upper,K,P,P/RK,Breathing
+Sit,2,Lower,K,RS,FL,Leg Raises
+Stand,2,Lower,W,RROM,IA,Beach Ball Squats
+Stand,2,Upper,A,PD,IROM,Goalkeeping
+Sit,2,Upper,K,RROM,P/RK,Fruit Picking
+Stand,2,Upper,S,RROM,FL,Tennis
+Stand,2,Upper,S,RS,FL,Boxing
+Sit,2,Upper,W,STIFF,IA,Sorting
+Stand,2,Upper,S,PD,IROM,Fireflies
+Sit,2,Upper,W,C,IROM,Archery
+Stand,2,Upper,E,STIFF,EN,Music Sword
+Sit,2,Upper,S,STIFF,IROM,Witch Craft
+Stand,2,Lower,S,C,PM,Skiing
+Stand,2,Lower,C,P,EN,Please be seated
+Stand,2,Lower,K,RS,IROM,Ring Dive
+Sit,2,Lower,E,P,PM,Breathing
+Sit,2,Lower,S,PD,IROM,Leg Raises

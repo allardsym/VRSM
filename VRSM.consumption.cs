@@ -5,12 +5,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace VRSM3
+namespace VRSM_App
 {
-    public partial class MLModel3
+    public partial class VRSM
     {
         /// <summary>
-        /// model input class for MLModel3.
+        /// model input class for VRSM.
         /// </summary>
         #region model input class
         public class ModelInput
@@ -41,13 +41,13 @@ namespace VRSM3
         #endregion
 
         /// <summary>
-        /// model output class for MLModel3.
+        /// model output class for VRSM.
         /// </summary>
         #region model output class
         public class ModelOutput
         {
             [ColumnName(@"Position")]
-            public float[] Position { get; set; }
+            public uint Position { get; set; }
 
             [ColumnName(@"Hands")]
             public float Hands { get; set; }
@@ -65,7 +65,7 @@ namespace VRSM3
             public float[] Goals { get; set; }
 
             [ColumnName(@"Outcome")]
-            public uint Outcome { get; set; }
+            public float[] Outcome { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
@@ -80,7 +80,7 @@ namespace VRSM3
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("MLModel3.zip");
+        private static string MLNetModelPath = Path.GetFullPath("VRSM.zip");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 

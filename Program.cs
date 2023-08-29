@@ -20,7 +20,7 @@ while (true)
 	modelInput.Goals = Console.ReadLine();
 
 	var mlContext = new MLContext();
-	var transformer = mlContext.Model.Load(Path.GetFullPath("MLModel3.zip"), out _);
+	var transformer = mlContext.Model.Load(Path.GetFullPath("VRSM.zip"), out _);
 	var predictionEngine = mlContext.Model
 		.CreatePredictionEngine<ModelInput, ModelOutput>(transformer);
 	var modelOutput = predictionEngine.Predict(modelInput);

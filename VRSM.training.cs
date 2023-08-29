@@ -9,9 +9,9 @@ using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
 using Microsoft.ML;
 
-namespace VRSM3
+namespace VRSM_App
 {
-    public partial class MLModel3
+    public partial class VRSM
     {
         /// <summary>
         /// Retrains model using the pipeline generated as part of the training process. For more information on how to load data, see aka.ms/loaddata.
@@ -35,15 +35,16 @@ namespace VRSM3
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(new []{new InputOutputColumnPair(@"Position", @"Position"),new InputOutputColumnPair(@"Bodyparts", @"Bodyparts")}, outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
+            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"Bodyparts", @"Bodyparts", outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
                                     .Append(mlContext.Transforms.ReplaceMissingValues(@"Hands", @"Hands"))      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Injuries",outputColumnName:@"Injuries"))      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Symptoms",outputColumnName:@"Symptoms"))      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Goals",outputColumnName:@"Goals"))      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Position",@"Bodyparts",@"Hands",@"Injuries",@"Symptoms",@"Goals"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"Outcome",inputColumnName:@"Outcome"))      
+                                    .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Outcome",outputColumnName:@"Outcome"))      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Bodyparts",@"Hands",@"Injuries",@"Symptoms",@"Goals",@"Outcome"}))      
+                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"Position",inputColumnName:@"Position"))      
                                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=0.03125F,L2Regularization=0.03125F,LabelColumnName=@"Outcome",FeatureColumnName=@"Features"}), labelColumnName:@"Outcome"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=0.03125F,L2Regularization=0.8128635F,LabelColumnName=@"Position",FeatureColumnName=@"Features"}), labelColumnName:@"Position"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;
