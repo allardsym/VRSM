@@ -47,7 +47,7 @@ namespace VRSM_App
         public class ModelOutput
         {
             [ColumnName(@"Position")]
-            public uint Position { get; set; }
+            public float[] Position { get; set; }
 
             [ColumnName(@"Hands")]
             public float Hands { get; set; }
@@ -65,7 +65,7 @@ namespace VRSM_App
             public float[] Goals { get; set; }
 
             [ColumnName(@"Outcome")]
-            public float[] Outcome { get; set; }
+            public uint Outcome { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }

@@ -21,8 +21,7 @@ while (true)
 
 	var mlContext = new MLContext();
 	var transformer = mlContext.Model.Load(Path.GetFullPath("VRSM.zip"), out _);
-	var predictionEngine = mlContext.Model
-		.CreatePredictionEngine<ModelInput, ModelOutput>(transformer);
+	var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(transformer);
 	var modelOutput = predictionEngine.Predict(modelInput);
 	var labelBuffer = new VBuffer<ReadOnlyMemory<char>>();
 	predictionEngine.OutputSchema["Score"].Annotations.GetValue("SlotNames", ref labelBuffer);
