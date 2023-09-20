@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "GitHub repository for VRSM-App."
+authors:
+  - family-names: Sprenger
+    given-names: Allard Sym
+title: "Model development for the Virtual Reality Rehabilitation Therapy Selection Tool"
+version: 0.1.0
+doi: 10.5281/zenodo.1234
+date-released: 2023-06-30
